@@ -18,7 +18,6 @@ public class GamePlay extends javax.swing.JFrame {
     
     private int isEmpty=0;
 
-
     /**
      * Creates new form GamePlay
      */
