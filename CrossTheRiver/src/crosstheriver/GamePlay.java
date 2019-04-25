@@ -12,11 +12,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
+
+
 /**
  *
  * @author nosai
  */
 public class GamePlay extends javax.swing.JFrame {
+    
+    private int isEmpty=0;
+
 
     private int isEmpty = 0;
     public int xLabel = 0;
@@ -47,7 +52,10 @@ public class GamePlay extends javax.swing.JFrame {
         farmerLabel = new javax.swing.JLabel();
         wolfLabel = new javax.swing.JLabel();
         goatLabel = new javax.swing.JLabel();
+<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
+=======
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,11 +63,14 @@ public class GamePlay extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         boatContainerPanel.setBackground(new java.awt.Color(204, 255, 255));
+<<<<<<< HEAD
         boatContainerPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 boatContainerPanelMouseClicked(evt);
             }
         });
+=======
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
         boatContainerPanel.setLayout(null);
 
         Boat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/boat (4).png"))); // NOI18N
@@ -67,6 +78,7 @@ public class GamePlay extends javax.swing.JFrame {
         Boat.setBounds(20, 80, 280, 130);
 
         objectOnBoat.addMouseListener(new java.awt.event.MouseAdapter() {
+<<<<<<< HEAD
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 objectOnBoatMouseClicked(evt);
             }
@@ -97,6 +109,38 @@ public class GamePlay extends javax.swing.JFrame {
         jPanel1.add(wolfLabel);
         wolfLabel.setBounds(110, 460, 80, 60);
 
+=======
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                objectOnBoatMouseClicked(evt);
+            }
+        });
+        boatContainerPanel.add(objectOnBoat);
+        objectOnBoat.setBounds(160, 60, 100, 80);
+        boatContainerPanel.add(farmerOnBoat);
+        farmerOnBoat.setBounds(30, 0, 130, 160);
+
+        jPanel1.add(boatContainerPanel);
+        boatContainerPanel.setBounds(320, 420, 320, 210);
+
+        farmerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/128Framer.png"))); // NOI18N
+        farmerLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                farmerLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(farmerLabel);
+        farmerLabel.setBounds(20, 400, 90, 140);
+
+        wolfLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/64wolf.png"))); // NOI18N
+        wolfLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                wolfLabelMouseClicked(evt);
+            }
+        });
+        jPanel1.add(wolfLabel);
+        wolfLabel.setBounds(110, 460, 80, 60);
+
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
         goatLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/64boat.png"))); // NOI18N
         goatLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -106,6 +150,7 @@ public class GamePlay extends javax.swing.JFrame {
         jPanel1.add(goatLabel);
         goatLabel.setBounds(170, 450, 70, 64);
 
+<<<<<<< HEAD
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +160,8 @@ public class GamePlay extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(510, 120, 73, 40);
 
+=======
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/1200x720.jpg"))); // NOI18N
         jPanel1.add(Background);
         Background.setBounds(0, -270, 1930, 1080);
@@ -134,6 +181,7 @@ public class GamePlay extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void farmerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farmerLabelMouseClicked
+<<<<<<< HEAD
         // TODO add your handling code here:
 
         farmerOnBoat.setIcon(farmerLabel.getIcon());
@@ -189,6 +237,34 @@ public class GamePlay extends javax.swing.JFrame {
         tm.start();
 
     }//GEN-LAST:event_jButton1ActionPerformed
+=======
+        // TODO add your handling code here:
+        
+        
+        farmerOnBoat.setIcon(farmerLabel.getIcon());
+        farmerLabel.setIcon(null);
+        
+    }//GEN-LAST:event_farmerLabelMouseClicked
+
+    private void objectOnBoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_objectOnBoatMouseClicked
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_objectOnBoatMouseClicked
+
+    private void wolfLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_wolfLabelMouseClicked
+        // TODO add your handling code here:
+        objectOnBoat.setIcon(wolfLabel.getIcon());
+        wolfLabel.setIcon(null);
+    }//GEN-LAST:event_wolfLabelMouseClicked
+
+    private void goatLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goatLabelMouseClicked
+        // TODO add your handling code here:
+        
+        objectOnBoat.setIcon(goatLabel.getIcon());
+        goatLabel.setIcon(null);
+    }//GEN-LAST:event_goatLabelMouseClicked
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
 
     /**
      * @param args the command line arguments
@@ -240,7 +316,10 @@ public class GamePlay extends javax.swing.JFrame {
     private javax.swing.JLabel farmerLabel;
     private javax.swing.JLabel farmerOnBoat;
     private javax.swing.JLabel goatLabel;
+<<<<<<< HEAD
     private javax.swing.JButton jButton1;
+=======
+>>>>>>> 1870f2da9beed946a2353b41ec4eb1c7b830e3bd
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel objectOnBoat;
     private javax.swing.JLabel wolfLabel;
