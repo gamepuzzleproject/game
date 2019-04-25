@@ -7,6 +7,9 @@ package crosstheriver;
 
 import java.awt.Component;
 import java.awt.MenuComponent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
 
 
 
@@ -40,6 +43,7 @@ public class GamePlay extends javax.swing.JFrame {
         Boat = new javax.swing.JLabel();
         objectOnBoat = new javax.swing.JLabel();
         farmerOnBoat = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         farmerLabel = new javax.swing.JLabel();
         wolfLabel = new javax.swing.JLabel();
         goatLabel = new javax.swing.JLabel();
@@ -68,6 +72,18 @@ public class GamePlay extends javax.swing.JFrame {
 
         jPanel1.add(boatContainerPanel);
         boatContainerPanel.setBounds(320, 420, 320, 210);
+
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("Move");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(550, 70, 130, 50);
 
         farmerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crosstheriver/128Framer.png"))); // NOI18N
         farmerLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,6 +158,20 @@ public class GamePlay extends javax.swing.JFrame {
         goatLabel.setIcon(null);
     }//GEN-LAST:event_goatLabelMouseClicked
 
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+      Timer tm = new Timer(10, new ActionListener(){
+          public void actionPerformed(ActionEvent e){
+              int xLabel = 0;
+              int yLabel= 0;
+              xLabel+=5;
+              boatContainerPanel.setLocation(xLabel,yLabel);
+              
+          }
+      });
+      tm.start();
+      
+    }//GEN-LAST:event_jButton3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -184,6 +214,7 @@ public class GamePlay extends javax.swing.JFrame {
     private javax.swing.JLabel farmerLabel;
     private javax.swing.JLabel farmerOnBoat;
     private javax.swing.JLabel goatLabel;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel objectOnBoat;
     private javax.swing.JLabel wolfLabel;
